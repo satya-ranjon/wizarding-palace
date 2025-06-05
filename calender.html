@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
+      @font-face {
+        font-family: "Zapfino";
+        src: url("./font/Zapfino.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
       .from-custom-blue {
         --tw-gradient-from: hsla(209, 36%, 35%, 1);
         --tw-gradient-stops: var(--tw-gradient-from),
@@ -18,7 +25,7 @@
   <body
     class="bg-gradient-to-b from-custom-blue to-custom-dark-blue relative min-h-screen"
   >
-    <div class="max-w-[1880px] px-5 2xl:px-0 mx-auto pb-[165px]">
+    <div class="max-w-[1900px] px-5 2xl:px-0 mx-auto pb-[165px]">
       <img
         src="./images/Logo completo home.png"
         alt="Logo"
@@ -56,10 +63,10 @@
           </a>
         </div>
         <div
-          class="w-full 2xl:h-[1000px] bg-[#ffffff15] relative pb-10 2xl:pb-0"
+          class="w-full 2xl:h-[1000px] bg-[#ffffff15] z-0 relative pb-10 2xl:pb-0"
         >
           <h1
-            class="text-center text-3xl lg:text-[58px] text-[#D7AE56] leading-[61px] mt-8 lg:mt-[71px] mb-[6px]"
+            class="text-center font-[Zapfino] text-3xl lg:text-[58px] text-[#D7AE56] leading-[61px] mt-8 lg:mt-[151px] mb-[6px]"
           >
             Giugno
           </h1>
