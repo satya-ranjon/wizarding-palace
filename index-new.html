@@ -45,7 +45,6 @@
         --tw-gradient-to: hsla(214, 69%, 15%, 1);
       }
 
-      /* Custom scrollbar styles - slider design */
       /* Custom Scrollbar Styles - Completely Custom Implementation */
       .custom-scroll-wrapper {
         position: relative;
@@ -68,19 +67,19 @@
 
       .custom-scrollbar {
         position: absolute;
-        right: 35px;
+        right: 8px;
         top: 0;
-        width: 10px;
+        width: 6px;
         height: 100%;
         background: linear-gradient(
           to bottom,
-          rgba(255, 255, 255, 0.253) 0%,
-          rgba(255, 255, 255, 0.253) 50%,
-          rgba(255, 255, 255, 0.253) 100%
+          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0.05) 50%,
+          rgba(255, 255, 255, 0.1) 100%
         );
-        /* border-radius: 3px; */
-        /* border: 1px solid rgba(255, 255, 255, 0.15); */
-        /* box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); */
+        border-radius: 3px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
         z-index: 10;
       }
 
@@ -88,7 +87,7 @@
         position: absolute;
         width: 24px;
         height: 24px;
-        right: 28px;
+        right: -9px;
         top: 0;
         background: radial-gradient(
           circle at 30% 30%,
@@ -281,6 +280,7 @@
             >
               NOTIFICHE
             </h1>
+
             <!-- Custom Scrollbar Implementation -->
             <div
               class="mx-5 w-[90%] text-[18px] z-50 text-white mt-5 custom-scroll-wrapper"
@@ -310,6 +310,7 @@
                 <p>Il tuo prestavolto è stato accettato!</p>
               </div>
             </div>
+
             <img
               src="./images/Cornici.png"
               alt="Cornici"
@@ -392,108 +393,37 @@
                     EVENTI del MESE
                   </h1>
                   <div
-                    class="mt-4 max-h-[180px] md:mr-4 lg:mr-12 custom-scroll-wrapper"
+                    class="mt-4 max-h-[180px] space-y-3 md:mr-4 lg:mr-12 overflow-y-auto scroll-box"
                   >
-                    <div class="custom-scrollbar"></div>
-                    <div class="custom-scrollbar-thumb" id="eventiThumb"></div>
-                    <div
-                      class="custom-scroll-content space-y-3"
-                      id="eventiContent"
-                    >
-                      <div class="">
-                        <h1
-                          class="lg:text-xl text-gray-400 lg:ml-4 font-[Klarissa]"
-                        >
-                          Nome evento o lezione
-                        </h1>
-                        <div
-                          class="text-start lg:text-center text-white flex flex-col lg:flex-row flex-justify-center items-start gap-2"
-                        >
-                          <h1>10.05.25</h1>
-                          <div>
-                            <p>Descrizione generale dell’evento</p>
-                            <p>ed eventuali precisazioni su orari etc.</p>
-                          </div>
+                    <div class="">
+                      <h1
+                        class="lg:text-xl text-gray-400 lg:ml-4 font-[Klarissa]"
+                      >
+                        Nome evento o lezione
+                      </h1>
+                      <div
+                        class="text-start lg:text-center text-white flex flex-col lg:flex-row flex-justify-center items-start gap-2"
+                      >
+                        <h1>10.05.25</h1>
+                        <div>
+                          <p>Descrizione generale dell'evento</p>
+                          <p>ed eventuali precisazioni su orari etc.</p>
                         </div>
                       </div>
-                      <div class="">
-                        <h1
-                          class="lg:text-xl text-gray-400 lg:ml-4 font-[Klarissa]"
-                        >
-                          Nome evento o lezione
-                        </h1>
-                        <div
-                          class="text-start lg:text-center text-white flex flex-col lg:flex-row flex-justify-center items-start gap-2"
-                        >
-                          <h1>10.05.25</h1>
-                          <div>
-                            <p>Descrizione generale dell’evento</p>
-                            <p>ed eventuali precisazioni su orari etc.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="">
-                        <h1
-                          class="lg:text-xl text-gray-400 lg:ml-4 font-[Klarissa]"
-                        >
-                          Nome evento o lezione
-                        </h1>
-                        <div
-                          class="text-start lg:text-center text-white flex flex-col lg:flex-row flex-justify-center items-start gap-2"
-                        >
-                          <h1>10.05.25</h1>
-                          <div>
-                            <p>Descrizione generale dell’evento</p>
-                            <p>ed eventuali precisazioni su orari etc.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="">
-                        <h1
-                          class="lg:text-xl text-gray-400 lg:ml-4 font-[Klarissa]"
-                        >
-                          Nome evento o lezione
-                        </h1>
-                        <div
-                          class="text-start lg:text-center text-white flex flex-col lg:flex-row flex-justify-center items-start gap-2"
-                        >
-                          <h1>10.05.25</h1>
-                          <div>
-                            <p>Descrizione generale dell’evento</p>
-                            <p>ed eventuali precisazioni su orari etc.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="">
-                        <h1
-                          class="lg:text-xl text-gray-400 lg:ml-4 font-[Klarissa]"
-                        >
-                          Nome evento o lezione
-                        </h1>
-                        <div
-                          class="text-start lg:text-center text-white flex flex-col lg:flex-row flex-justify-center items-start gap-2"
-                        >
-                          <h1>10.05.25</h1>
-                          <div>
-                            <p>Descrizione generale dell’evento</p>
-                            <p>ed eventuali precisazioni su orari etc.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="">
-                        <h1
-                          class="lg:text-xl text-gray-400 lg:ml-4 font-[Klarissa]"
-                        >
-                          Nome evento o lezione
-                        </h1>
-                        <div
-                          class="text-start lg:text-center text-white flex flex-col lg:flex-row flex-justify-center items-start gap-2"
-                        >
-                          <h1>10.05.25</h1>
-                          <div>
-                            <p>Descrizione generale dell’evento</p>
-                            <p>ed eventuali precisazioni su orari etc.</p>
-                          </div>
+                    </div>
+                    <div class="">
+                      <h1
+                        class="lg:text-xl text-gray-400 lg:ml-4 font-[Klarissa]"
+                      >
+                        Nome evento o lezione
+                      </h1>
+                      <div
+                        class="text-start lg:text-center text-white flex flex-col lg:flex-row flex-justify-center items-start gap-2"
+                      >
+                        <h1>10.05.25</h1>
+                        <div>
+                          <p>Descrizione generale dell'evento</p>
+                          <p>ed eventuali precisazioni su orari etc.</p>
                         </div>
                       </div>
                     </div>
@@ -523,232 +453,113 @@
             </div>
             <div
               class="w-full bg-[#ffffff15] z-50 relative md:h-[410px] lg:h-[400px] xl:h-[410px]"
-            >
-              <div
-                class="flex flex-col md:flex-row justify-start items-start gap-4 lg:gap-9 h-full"
-              >
-                <div class="w-full pt-10 h-full md:ml-10 lg:ml-24 px-5">
-                  <h1
-                    class="text-center text-xl lg:text-2xl text-[#d6ae56] font-semibold font-[ma_nrm]"
-                  >
-                    CRONOLOGIA
-                  </h1>
-                  <div
-                    class="h-[280px] w-full text-start mt-4 text-white space-y-3 lg:text-xl pr-4 pb-2 custom-scroll-wrapper"
-                  >
-                    <div class="custom-scrollbar"></div>
-                    <div
-                      class="custom-scrollbar-thumb"
-                      id="cronologiaThumb"
-                    ></div>
-                    <div class="custom-scroll-content" id="cronologiaContent">
-                      <p>
-                        06/05/1957: ipsum dolor sit amet, consectetur
-                        adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim adminim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat.
-                      </p>
-                      <p>
-                        15/06/1956: aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint.
-                      </p>
-                      <p>
-                        06/05/1957: ipsum dolor sit amet, consectetur
-                        adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim adminim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat.
-                      </p>
-                      <p>
-                        15/06/1956: aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint.
-                      </p>
-                      <p>
-                        12/03/1955: Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris.
-                      </p>
-                      <p>
-                        28/08/1954: Sed ut perspiciatis unde omnis iste natus
-                        error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore
-                        veritatis.
-                      </p>
-                      <p>
-                        14/11/1953: But I must explain to you how all this
-                        mistaken idea of denouncing pleasure and praising pain
-                        was born and I will give you a complete account of the
-                        system.
-                      </p>
-                      <p>
-                        05/07/1952: At vero eos et accusamus et iusto odio
-                        dignissimos ducimus qui blanditiis praesentium
-                        voluptatum deleniti atque corrupti quos dolores et quas
-                        molestias excepturi sint.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="h-full min-w-full md:min-w-[150px] lg:min-w-[200px] xl:min-w-[400px] flex justify-center items-center"
-                >
-                  <img src="./images/Stemma.png" alt="" />
-                </div>
-              </div>
-              <img
-                src="./images/Cornici.png"
-                alt="Cornici"
-                class="absolute top-0 left-0 w-[80px] lg:w-[110px]"
-              />
-              <img
-                src="./images/Cornici copia.png"
-                alt="Cornici copia"
-                class="absolute right-0 top-0 w-[80px] lg:w-[110px]"
-              />
-            </div>
+            ></div>
           </div>
         </div>
       </div>
     </div>
 
-    <img
-      src="./images/Castello giorno.png"
-      alt="Calendar Design"
-      class="absolute bottom-0 left-0 w-[600px] xl:w-fit"
-    />
     <script>
-      // Custom Circular Scrollbar JavaScript for Multiple Instances
+      // Custom Circular Scrollbar JavaScript
       document.addEventListener("DOMContentLoaded", function () {
-        // Initialize all custom scrollbars
-        const scrollbarInstances = [
-          {
-            contentId: "customContent",
-            thumbId: "customThumb",
-          },
-          {
-            contentId: "eventiContent",
-            thumbId: "eventiThumb",
-          },
-          {
-            contentId: "cronologiaContent",
-            thumbId: "cronologiaThumb",
-          },
-        ];
+        const scrollContent = document.getElementById("customContent");
+        const scrollThumb = document.getElementById("customThumb");
+        const scrollWrapper = scrollContent.parentElement;
 
-        scrollbarInstances.forEach((instance) => {
-          initializeScrollbar(instance.contentId, instance.thumbId);
-        });
+        let isDragging = false;
+        let dragStartY = 0;
+        let thumbStartTop = 0;
 
-        function initializeScrollbar(contentId, thumbId) {
-          const scrollContent = document.getElementById(contentId);
-          const scrollThumb = document.getElementById(thumbId);
-
+        function updateThumbPosition() {
           if (!scrollContent || !scrollThumb) return;
 
-          const scrollWrapper = scrollContent.parentElement;
+          const scrollHeight = scrollContent.scrollHeight;
+          const clientHeight = scrollContent.clientHeight;
+          const scrollTop = scrollContent.scrollTop;
 
-          let isDragging = false;
-          let dragStartY = 0;
-          let thumbStartTop = 0;
-
-          function updateThumbPosition() {
-            const scrollHeight = scrollContent.scrollHeight;
-            const clientHeight = scrollContent.clientHeight;
-            const scrollTop = scrollContent.scrollTop;
-
-            if (scrollHeight <= clientHeight) {
-              scrollThumb.style.display = "none";
-              return;
-            }
-
-            scrollThumb.style.display = "block";
-
-            const scrollRatio = scrollTop / (scrollHeight - clientHeight);
-            const thumbRange =
-              scrollWrapper.clientHeight - scrollThumb.offsetHeight;
-            const thumbTop = scrollRatio * thumbRange;
-
-            scrollThumb.style.top =
-              Math.max(0, Math.min(thumbRange, thumbTop)) + "px";
+          if (scrollHeight <= clientHeight) {
+            scrollThumb.style.display = "none";
+            return;
           }
 
-          function scrollToPosition(clientY) {
-            const rect = scrollWrapper.getBoundingClientRect();
-            const relativeY = clientY - rect.top;
-            const thumbRange =
-              scrollWrapper.clientHeight - scrollThumb.offsetHeight;
-            const scrollRatio = Math.max(
-              0,
-              Math.min(
-                1,
-                (relativeY - scrollThumb.offsetHeight / 2) / thumbRange
-              )
-            );
+          scrollThumb.style.display = "block";
 
-            const maxScroll =
-              scrollContent.scrollHeight - scrollContent.clientHeight;
-            scrollContent.scrollTop = scrollRatio * maxScroll;
-          }
+          const scrollRatio = scrollTop / (scrollHeight - clientHeight);
+          const thumbRange =
+            scrollWrapper.clientHeight - scrollThumb.offsetHeight;
+          const thumbTop = scrollRatio * thumbRange;
 
-          // Initialize
-          updateThumbPosition();
-
-          // Update thumb on scroll
-          scrollContent.addEventListener("scroll", updateThumbPosition);
-
-          // Mouse wheel support on wrapper
-          scrollWrapper.addEventListener("wheel", function (e) {
-            e.preventDefault();
-            scrollContent.scrollTop += e.deltaY * 0.5;
-          });
-
-          // Thumb drag functionality
-          scrollThumb.addEventListener("mousedown", function (e) {
-            isDragging = true;
-            dragStartY = e.clientY;
-            thumbStartTop = parseInt(scrollThumb.style.top) || 0;
-            scrollThumb.classList.add("dragging");
-            e.preventDefault();
-          });
-
-          document.addEventListener("mousemove", function (e) {
-            if (!isDragging) return;
-
-            const deltaY = e.clientY - dragStartY;
-            const newTop = thumbStartTop + deltaY;
-            const thumbRange =
-              scrollWrapper.clientHeight - scrollThumb.offsetHeight;
-            const clampedTop = Math.max(0, Math.min(thumbRange, newTop));
-
-            const scrollRatio = clampedTop / thumbRange;
-            const maxScroll =
-              scrollContent.scrollHeight - scrollContent.clientHeight;
-            scrollContent.scrollTop = scrollRatio * maxScroll;
-          });
-
-          document.addEventListener("mouseup", function () {
-            if (isDragging) {
-              isDragging = false;
-              scrollThumb.classList.remove("dragging");
-            }
-          });
-
-          // Click on track
-          const customScrollbar =
-            scrollWrapper.querySelector(".custom-scrollbar");
-          if (customScrollbar) {
-            customScrollbar.addEventListener("click", function (e) {
-              scrollToPosition(e.clientY);
-            });
-          }
-
-          // Resize handler
-          window.addEventListener("resize", updateThumbPosition);
+          scrollThumb.style.top =
+            Math.max(0, Math.min(thumbRange, thumbTop)) + "px";
         }
+
+        function scrollToPosition(clientY) {
+          const rect = scrollWrapper.getBoundingClientRect();
+          const relativeY = clientY - rect.top;
+          const thumbRange =
+            scrollWrapper.clientHeight - scrollThumb.offsetHeight;
+          const scrollRatio = Math.max(
+            0,
+            Math.min(1, (relativeY - scrollThumb.offsetHeight / 2) / thumbRange)
+          );
+
+          const maxScroll =
+            scrollContent.scrollHeight - scrollContent.clientHeight;
+          scrollContent.scrollTop = scrollRatio * maxScroll;
+        }
+
+        // Initialize
+        updateThumbPosition();
+
+        // Update thumb on scroll
+        scrollContent.addEventListener("scroll", updateThumbPosition);
+
+        // Mouse wheel support on wrapper
+        scrollWrapper.addEventListener("wheel", function (e) {
+          e.preventDefault();
+          scrollContent.scrollTop += e.deltaY * 0.5;
+        });
+
+        // Thumb drag functionality
+        scrollThumb.addEventListener("mousedown", function (e) {
+          isDragging = true;
+          dragStartY = e.clientY;
+          thumbStartTop = parseInt(scrollThumb.style.top) || 0;
+          scrollThumb.classList.add("dragging");
+          e.preventDefault();
+        });
+
+        document.addEventListener("mousemove", function (e) {
+          if (!isDragging) return;
+
+          const deltaY = e.clientY - dragStartY;
+          const newTop = thumbStartTop + deltaY;
+          const thumbRange =
+            scrollWrapper.clientHeight - scrollThumb.offsetHeight;
+          const clampedTop = Math.max(0, Math.min(thumbRange, newTop));
+
+          const scrollRatio = clampedTop / thumbRange;
+          const maxScroll =
+            scrollContent.scrollHeight - scrollContent.clientHeight;
+          scrollContent.scrollTop = scrollRatio * maxScroll;
+        });
+
+        document.addEventListener("mouseup", function () {
+          if (isDragging) {
+            isDragging = false;
+            scrollThumb.classList.remove("dragging");
+          }
+        });
+
+        // Click on track
+        scrollWrapper
+          .querySelector(".custom-scrollbar")
+          .addEventListener("click", function (e) {
+            scrollToPosition(e.clientY);
+          });
+
+        // Resize handler
+        window.addEventListener("resize", updateThumbPosition);
       });
     </script>
   </body>
