@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <style>
       @font-face {
         font-family: "Zapfino";
@@ -20,6 +21,40 @@
       .to-custom-dark-blue {
         --tw-gradient-to: hsla(214, 69%, 15%, 1);
       }
+
+      /* Custom scrollbar styles - slider design */
+      .scroll-box::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .scroll-box::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+        margin: 5px 0;
+      }
+
+      .scroll-box::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 50px;
+        border: none;
+        min-height: 20px;
+        position: relative;
+      }
+
+      .scroll-box::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+      }
+
+      .scroll-box::-webkit-scrollbar-thumb:active {
+        background-color: rgba(245, 215, 110, 0.9);
+      }
+
+      /* Firefox scrollbar */
+      .scroll-box {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.9) rgba(255, 255, 255, 0.3);
+      }
     </style>
   </head>
   <body
@@ -32,10 +67,10 @@
         class="mx-auto mt-[87px] mb-[50px] md:w-fit w-[150px]"
       />
       <div
-        class="w-full flex flex-col md:flex-row justify-start items-start gap-10 xl:gap-[80px]"
+        class="w-full flex flex-col xl:flex-row justify-start items-start gap-10 xl:gap-[80px]"
       >
         <div
-          class="flex flex-row md:flex-col items-center justify-center gap-5 md:gap-8 lg:gap-[46px] md:max-w-10 2xl:max-w-fit"
+          class="flex flex-row xl:flex-col items-center justify-center gap-3 md:gap-8 xl:gap-[46px] xl:max-w-[70px]"
         >
           <a href="#">
             <img src="./images/Logo.png" alt="nav-icon-1" />
@@ -44,7 +79,7 @@
             <img src="./images/Libro.png" alt="nav-icon-1" />
           </a>
           <a href="#">
-            <img src="./images/Calendario.png" alt="nav-icon-3" />
+            <img src="./images/Calendario.svg" alt="nav-icon-3" />
           </a>
           <a href="#">
             <img src="./images/Forum.png" alt="nav-icon-4" />
@@ -63,19 +98,348 @@
           </a>
         </div>
         <div
-          class="w-full 2xl:h-[1000px] bg-[#ffffff15] z-0 relative pb-10 2xl:pb-0"
+          class="flex flex-col md:flex-row justify-start items-start w-full gap-4 lg:gap-9"
         >
-          <div class="mx-5 md:mx-[50px] lg:mx-[100px] 2xl:mx-[150px]"></div>
-          <img
-            src="./images/Cornici.png"
-            alt="Cornici"
-            class="absolute top-0 left-0 w-[100px] lg:w-fit"
-          />
-          <img
-            src="./images/Cornici copia.png"
-            alt="Cornici copia"
-            class="absolute right-0 top-0 w-[100px] lg:w-fit"
-          />
+          <div
+            class="min-w-full md:min-w-[300px] bg-[#ffffff15] pb-28 z-0 relative"
+          >
+            <div class="">
+              <h1
+                class="text-center text-[24px] mt-8 font-semibold text-[#F5D76E]"
+              >
+                Albus_Dumbledore
+              </h1>
+              <div class="ml-8 -mt-16 relative">
+                <img
+                  src="./images/userPLACEHOLDER.png"
+                  alt=""
+                  class="relative -bottom-20"
+                />
+                <img src="./images/avatar-standing-place.png" alt="" />
+                <div class="absolute top-36 right-16 xl:right-28">
+                  <div
+                    class="space-x-3 flex items-center justify-start text-white text-xl"
+                  >
+                    <img src="./images/coins.png" alt="coins" />
+                    <span>395</span>
+                  </div>
+                </div>
+                <div class="absolute top-48 right-20 xl:right-32">
+                  <div
+                    class="space-x-3 flex items-center justify-start text-white text-xl"
+                  >
+                    <img src="./images/ps.png" alt="coins" />
+                    <span>45</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mx-5 bg-[#ffffff36] mt-5 flex items-center gap-2 px-4">
+              <input
+                type="text"
+                class="text-xl py-1 w-full h-[45px] text-center text-white outline-none border-none"
+                placeholder="Cerca..."
+              />
+              <img src="./images/sarch.png" alt="sarch" />
+            </div>
+            <h1 class="text-[#F5D76E] text-xl mt-16 text-center font-semibold">
+              NOTIFICHE
+            </h1>
+            <div
+              class="mx-5 w-[90%] pr-2 text-[18px] space-y-1 text-white mt-5 max-h-[160px] overflow-y-auto scroll-box relative"
+            >
+              <p>La tua biografia è stata accettata!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+              <p>Il tuo prestavolto è stato accettato!</p>
+            </div>
+            <img
+              src="./images/Cornici.png"
+              alt="Cornici"
+              class="absolute top-0 left-0 w-[80px] lg:w-[110px]"
+            />
+            <img
+              src="./images/corner1bottom.svg"
+              alt="Cornici"
+              class="absolute left-0 bottom-0 w-[80px] lg:w-[110px]"
+            />
+            <img
+              src="./images/Cornici copia.png"
+              alt="Cornici copia"
+              class="absolute right-0 top-0 w-[80px] lg:w-[110px]"
+            />
+            <img
+              src="./images/corner2bottom.svg"
+              alt="Cornici copia"
+              class="absolute right-0 bottom-0 w-[80px] lg:w-[110px]"
+            />
+          </div>
+          <div class="flex w-full flex-col gap-4 lg:gap-9">
+            <div
+              class="w-full bg-[#ffffff15] z-0 relative h-[810px] md:h-[410px] lg:h-[400px] xl:h-[410px]"
+            >
+              <div
+                class="flex flex-col md:flex-row justify-start items-start gap-8 h-full"
+              >
+                <div
+                  class="relative text-white text-xl h-full w-full md:min-w-[205px] lg:min-w-[320px] xl:min-w-[380px]"
+                >
+                  <div
+                    class="md:absolute flex justify-center mt-10 md:mt-0 top-8 left-24 lg:left-32"
+                  >
+                    <div class="flex justify-start items-center gap-2">
+                      <img
+                        src="./images/weather-cloud.png"
+                        class="lg:w-fit w-12"
+                        alt="weather"
+                      />
+                      <span>12.7</span>
+                    </div>
+                  </div>
+                  <div
+                    class="md:absolute flex justify-center mt-4 md:mt-0 gap-3 md:gap-0 top-32 left-10 lg:left-16"
+                  >
+                    <div class="flex justify-start items-center gap-2">
+                      <img
+                        src="./images/community.png"
+                        class="w-10 lg:w-fit"
+                        alt="community"
+                      />
+                      <span>17</span>
+                    </div>
+                    <img
+                      src="./images/vaccino-tree.png"
+                      class="md:hidden"
+                      alt="vaccino"
+                    />
+                  </div>
+                  <div
+                    class="md:absolute hidden md:block top-32 left-36 lg:left-44 w-32"
+                  >
+                    <img src="./images/vaccino-tree.png" alt="vaccino" />
+                  </div>
+                  <div
+                    class="md:absolute mx-auto flex justify-center items-center -bottom-2 right-0"
+                  >
+                    <img
+                      src="./images/3-line-anilli.png"
+                      class="w-[160px] xl:w-[190px]"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="w-full pt-10 h-full px-5">
+                  <h1
+                    class="text-xl lg:text-2xl lg:mr-7 text-center md:text-start lx:mr-0 xl:text-3xl lg:text-center font-semibold text-[#F5D76E]"
+                  >
+                    EVENTI del MESE
+                  </h1>
+                  <div
+                    class="mt-4 max-h-[180px] space-y-3 md:mr-4 lg:mr-12 overflow-y-auto scroll-box"
+                  >
+                    <div class="">
+                      <h1 class="lg:text-xl text-gray-400 lg:ml-4">
+                        Nome evento o lezione
+                      </h1>
+                      <div
+                        class="text-start lg:text-center text-white flex flex-col lg:flex-row flex-justify-center items-start gap-2"
+                      >
+                        <h1>10.05.25</h1>
+                        <div>
+                          <p>Descrizione generale dell’evento</p>
+                          <p>ed eventuali precisazioni su orari etc.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="">
+                      <h1 class="lg:text-xl text-gray-400 lg:ml-4">
+                        Nome evento o lezione
+                      </h1>
+                      <div
+                        class="text-start lg:text-center text-white flex flex-col lg:flex-row flex-justify-center items-start gap-2"
+                      >
+                        <h1>10.05.25</h1>
+                        <div>
+                          <p>Descrizione generale dell’evento</p>
+                          <p>ed eventuali precisazioni su orari etc.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="">
+                      <h1 class="lg:text-xl text-gray-400 lg:ml-4">
+                        Nome evento o lezione
+                      </h1>
+                      <div
+                        class="text-start lg:text-center text-white flex flex-col lg:flex-row flex-justify-center items-start gap-2"
+                      >
+                        <h1>10.05.25</h1>
+                        <div>
+                          <p>Descrizione generale dell’evento</p>
+                          <p>ed eventuali precisazioni su orari etc.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="">
+                      <h1 class="lg:text-xl text-gray-400 lg:ml-4">
+                        Nome evento o lezione
+                      </h1>
+                      <div
+                        class="text-start lg:text-center text-white flex flex-col lg:flex-row flex-justify-center items-start gap-2"
+                      >
+                        <h1>10.05.25</h1>
+                        <div>
+                          <p>Descrizione generale dell’evento</p>
+                          <p>ed eventuali precisazioni su orari etc.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="">
+                      <h1 class="lg:text-xl text-gray-400 lg:ml-4">
+                        Nome evento o lezione
+                      </h1>
+                      <div
+                        class="text-start lg:text-center text-white flex flex-col lg:flex-row flex-justify-center items-start gap-2"
+                      >
+                        <h1>10.05.25</h1>
+                        <div>
+                          <p>Descrizione generale dell’evento</p>
+                          <p>ed eventuali precisazioni su orari etc.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="">
+                      <h1 class="lg:text-xl text-gray-400 lg:ml-4">
+                        Nome evento o lezione
+                      </h1>
+                      <div
+                        class="text-start lg:text-center text-white flex flex-col lg:flex-row flex-justify-center items-start gap-2"
+                      >
+                        <h1>10.05.25</h1>
+                        <div>
+                          <p>Descrizione generale dell’evento</p>
+                          <p>ed eventuali precisazioni su orari etc.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="./images/Cornici.png"
+                alt="Cornici"
+                class="absolute top-0 left-0 w-[80px] lg:w-[110px]"
+              />
+              <img
+                src="./images/corner1bottom.svg"
+                alt="Cornici"
+                class="absolute left-0 bottom-0 w-[80px] lg:w-[110px]"
+              />
+              <img
+                src="./images/Cornici copia.png"
+                alt="Cornici copia"
+                class="absolute right-0 top-0 w-[80px] lg:w-[110px]"
+              />
+              <img
+                src="./images/corner2bottom.svg"
+                alt="Cornici copia"
+                class="absolute right-0 bottom-0 w-[80px] lg:w-[110px]"
+              />
+            </div>
+            <div
+              class="w-full bg-[#ffffff15] z-50 relative md:h-[410px] lg:h-[400px] xl:h-[410px]"
+            >
+              <div
+                class="flex flex-col md:flex-row justify-start items-start gap-4 lg:gap-9 h-full"
+              >
+                <div class="w-full pt-10 h-full md:ml-10 lg:ml-24 px-5">
+                  <h1 class="text-center text-[#F5D76E] text-xl">CRONOLOGIA</h1>
+                  <div
+                    class="h-[280px] w-full text-start overflow-y-scroll scroll-box mt-4 text-white space-y-3 lg:text-xl pr-4 pb-2"
+                  >
+                    <p>
+                      06/05/1957: ipsum dolor sit amet, consectetur adipisicing
+                      elit, sed do eiusmod tempor incididunt ut labore et dolore
+                      magna aliqua. Ut enim adminim veniam, quis nostrud
+                      exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat.
+                    </p>
+                    <p>
+                      15/06/1956: aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur.
+                      Excepteur sint.
+                    </p>
+                    <p>
+                      06/05/1957: ipsum dolor sit amet, consectetur adipisicing
+                      elit, sed do eiusmod tempor incididunt ut labore et dolore
+                      magna aliqua. Ut enim adminim veniam, quis nostrud
+                      exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat.
+                    </p>
+                    <p>
+                      15/06/1956: aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur.
+                      Excepteur sint.
+                    </p>
+                    <p>
+                      12/03/1955: Lorem ipsum dolor sit amet, consectetur
+                      adipisicing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam,
+                      quis nostrud exercitation ullamco laboris.
+                    </p>
+                    <p>
+                      28/08/1954: Sed ut perspiciatis unde omnis iste natus
+                      error sit voluptatem accusantium doloremque laudantium,
+                      totam rem aperiam, eaque ipsa quae ab illo inventore
+                      veritatis.
+                    </p>
+                    <p>
+                      14/11/1953: But I must explain to you how all this
+                      mistaken idea of denouncing pleasure and praising pain was
+                      born and I will give you a complete account of the system.
+                    </p>
+                    <p>
+                      05/07/1952: At vero eos et accusamus et iusto odio
+                      dignissimos ducimus qui blanditiis praesentium voluptatum
+                      deleniti atque corrupti quos dolores et quas molestias
+                      excepturi sint.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="h-full min-w-full md:min-w-[150px] lg:min-w-[200px] xl:min-w-[400px] flex justify-center items-center"
+                >
+                  <img src="./images/Stemma.png" alt="" />
+                </div>
+              </div>
+              <img
+                src="./images/Cornici.png"
+                alt="Cornici"
+                class="absolute top-0 left-0 w-[80px] lg:w-[110px]"
+              />
+              <img
+                src="./images/Cornici copia.png"
+                alt="Cornici copia"
+                class="absolute right-0 top-0 w-[80px] lg:w-[110px]"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
